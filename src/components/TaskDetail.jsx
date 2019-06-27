@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Message from '../assets/note.svg';
+import Phone from '../assets/phone.svg';
 
 class TaskDetail extends Component {
   constructor(props) {
@@ -6,7 +10,7 @@ class TaskDetail extends Component {
 
     this.state = {
       isLoaded: false,
-      result: {},
+      result: { log: [{}] }
     };
   }
 
@@ -19,13 +23,13 @@ class TaskDetail extends Component {
         result => {
           this.setState({
             result: result,
-            isLoaded: true,
+            isLoaded: true
           });
         },
         error => {
           this.setState({
             isLoaded: true,
-            error,
+            error
           });
         }
       );
@@ -33,21 +37,53 @@ class TaskDetail extends Component {
 
   render() {
     return (
-      <article class="taskDetail">
-        <section className="taskInfo">
+      <article>
+        <Section className="taskInfo">
           <h2>Task information</h2>
           <hr />
           <p>{this.state.result.taskBody}</p>
-        </section>
+        </Section>
 
-        <section className="logInfo">
-          <h2>Log</h2>
+        <Section className="logInfo">
+          <h2>Log </h2>
           <hr />
-          <p>{this.state.result.taskBody}</p>
-        </section>
+          <ul>
+            {this.state.result.log.map((log, index) => {
+              const Type = log.type == 'phone' ? Phone : Message;
+              return (
+                <li key={index}>
+                  <img src={Type} />
+                  <span>{log.content}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </Section>
+        <Link to="/">Back</Link>
       </article>
     );
   }
 }
+
+const Section = styled.section`
+  background: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26), 0 7px 14px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  margin-bottom: 25px;
+
+  li {
+    list-style: none;
+    padding: 10px 0px;
+    img {
+      padding-right: 10px;
+    }
+    &:nth-child(even) {
+      background: #f2f2f2;
+    }
+  }
+`;
 
 export default TaskDetail;
