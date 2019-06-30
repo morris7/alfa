@@ -1,3 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`when rendering the App should should match snapshot 1`] = `ShallowWrapper {}`;
+exports[`when rendering a Task component with props should match snapshot 1`] = `
+<styled.section
+  id="123"
+>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          test note
+        </td>
+        <td>
+          batman
+        </td>
+        <td>
+          01.01.2001
+        </td>
+      </tr>
+      <tr
+        className="taskInfo"
+      >
+        <td
+          colSpan="4"
+        >
+          test body
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td>
+          <Link
+            to="/Task/123"
+          >
+            View Task
+          </Link>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</styled.section>
+`;
+
+exports[`when rendering a Task component without props should match snapshot 1`] = `
+<styled.section>
+  <table>
+    <tbody>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+      </tr>
+      <tr
+        className="taskInfo"
+      >
+        <td
+          colSpan="4"
+        />
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td>
+          <Link
+            to="/Task/undefined"
+          >
+            View Task
+          </Link>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</styled.section>
+`;

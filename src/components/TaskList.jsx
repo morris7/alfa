@@ -34,17 +34,7 @@ class TaskList extends Component {
 
   render() {
     const tasks = this.state.result.map(task => {
-      return (
-        <Task
-          id={task.id}
-          taskNumber={task.taskNumber}
-          taskBody={task.taskBody}
-          note={task.note}
-          name={task.customer}
-          date={task.date}
-          key={task.id}
-        />
-      );
+      return <Task {...task} key={task.id} />;
     });
 
     return (

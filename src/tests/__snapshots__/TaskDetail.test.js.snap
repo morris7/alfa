@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when rendering a TaskDetail component when the fetch succeeds matches snapshot 1`] = `
+.c1 {
+  background: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.26),0 7px 14px 0 rgba(0,0,0,0.19);
+  border-radius: 2px;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.c1 li {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.c1 li img {
+  padding-right: 10px;
+}
+
+.c1 li:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.c0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<TaskDetail
+  match={
+    Object {
+      "params": Object {
+        "id": 1,
+      },
+    }
+  }
+>
+  <styled.article>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  a {
+    text-decoration: none;
+  }
+",
+            ],
+          },
+          "displayName": "styled.article",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "article",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <article
+        className="c0"
+      >
+        <styled.section
+          className="taskInfo"
+        >
+          <StyledComponent
+            className="taskInfo"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bdVaJa",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  background: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26), 0 7px 14px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  margin-bottom: 25px;
+
+  li {
+    list-style: none;
+    padding: 10px 0px;
+    img {
+      padding-right: 10px;
+    }
+    &:nth-child(even) {
+      background: #f2f2f2;
+    }
+  }
+",
+                  ],
+                },
+                "displayName": "styled.section",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bdVaJa",
+                "target": "section",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <section
+              className="taskInfo c1"
+            >
+              <h2>
+                Task information
+              </h2>
+              <hr />
+              <p>
+                Task body
+              </p>
+            </section>
+          </StyledComponent>
+        </styled.section>
+        <styled.section
+          className="logInfo"
+        >
+          <StyledComponent
+            className="logInfo"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bdVaJa",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  background: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26), 0 7px 14px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  margin-bottom: 25px;
+
+  li {
+    list-style: none;
+    padding: 10px 0px;
+    img {
+      padding-right: 10px;
+    }
+    &:nth-child(even) {
+      background: #f2f2f2;
+    }
+  }
+",
+                  ],
+                },
+                "displayName": "styled.section",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bdVaJa",
+                "target": "section",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <section
+              className="logInfo c1"
+            >
+              <h2>
+                Log 
+              </h2>
+              <hr />
+              <ul>
+                <li
+                  key="0"
+                >
+                  <img
+                    src="phone.svg"
+                  />
+                  <span>
+                    content
+                  </span>
+                </li>
+              </ul>
+              <Button
+                text="Add Call"
+              >
+                <button>
+                  Add Call
+                </button>
+              </Button>
+              <Button
+                text="Add Note"
+              >
+                <button>
+                  Add Note
+                </button>
+              </Button>
+            </section>
+          </StyledComponent>
+        </styled.section>
+        <Link
+          to="/"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Back
+          </a>
+        </Link>
+      </article>
+    </StyledComponent>
+  </styled.article>
+</TaskDetail>
+`;
