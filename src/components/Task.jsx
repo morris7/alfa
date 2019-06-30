@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 const Task = props => {
-  const { taskNumber, taskBody, note, name, date, id } = props;
+  const { taskNumber, taskBody, note, customer, date, id } = props;
 
   return (
     <Section id={id}>
@@ -12,7 +12,7 @@ const Task = props => {
           <tr>
             <td>{taskNumber}</td>
             <td>{note}</td>
-            <td>{name}</td>
+            <td>{customer}</td>
             <td>{date}</td>
           </tr>
           <tr className="taskInfo">
