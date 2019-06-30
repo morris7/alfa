@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Task from './Task';
+import Panel from './Panel';
 
 class TaskList extends Component {
   constructor(props) {
@@ -38,21 +39,20 @@ class TaskList extends Component {
     });
 
     return (
-      <Article>
-        <h2>Tasks</h2>
-        <hr />
-        {tasks}
-      </Article>
+      <Panel>
+        <Article>
+          <h2>Tasks</h2>
+          <hr />
+          {tasks}
+        </Article>
+      </Panel>
     );
   }
 }
 
 const Article = styled.article`
   padding: 15px;
-  margin-bottom: 25px;
   background: #ffffff;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26), 0 7px 14px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 2px;
 `;
 
 export default TaskList;
