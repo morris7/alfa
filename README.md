@@ -6,6 +6,4 @@ To run this project please clone and run the following in your terminal in the p
 1. yarn run jsonServer
 2. yarn start
 
-tests can be ran using
-
-yarn test
+tests can be ran using 'yarn test'
